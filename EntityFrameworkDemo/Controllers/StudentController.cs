@@ -17,7 +17,7 @@ namespace EntityFrameworkDemo.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Student>>> GetAll()
+        public async Task<IActionResult> GetAll()
         {
             var students = await _context.Students.ToListAsync();
             return Ok(students);
